@@ -3,6 +3,8 @@
 	display: flex;
 	flex-direction: column;
 	background: linear-gradient(180deg, #f5ad6f 0%, #e539ab 50%, #7613ee 100%);
+	will-change: transition;
+	will-change: transform;
 }
 .page {
 	will-change: transition;

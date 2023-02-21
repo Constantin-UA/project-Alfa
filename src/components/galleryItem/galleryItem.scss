@@ -1,0 +1,24 @@
+.gallaryItem {
+	/* 	height: fit-content;
+	width: fit-content;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 8px;
+	background: rgba(24, 26, 35, 0.8);
+	border-radius: 24px;
+	position: relative;
+	overflow: hidden;
+	cursor: pointer; */
+	transition: 1s cubic-bezier(0.2, 0.6, 0, 1) !important;
+	will-change: transform;
+	&__a {
+		border-radius: 8px;
+	}
+	&__img {
+		width: 100%;
+		height: 100%;
+		border-radius: 8px;
+	}
+}

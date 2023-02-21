@@ -5,9 +5,10 @@ import item_4 from '../../assets/icons/social/item-4.png';
 import item_5 from '../../assets/icons/social/item-5.png';
 import IconsBox from '../iconsBox/IconsBox';
 import Button from '../button/Button';
+import NameBox from '../nameBox/NameBox';
 
 import './contactBox.scss';
-const icons1 = [item_1, item_2, item_3, item_4, item_5];
+const social = [item_1, item_2, item_3, item_4, item_5];
 
 export default function ContactBox() {
 	return (
@@ -22,7 +23,8 @@ export default function ContactBox() {
 				<div className="contactBox__subtitle">
 					<p>You can find it here:</p>
 				</div>
-				<IconsBox icons={icons1} />
+				<NameBox />
+				<IconsBox icons={social} />
 				<Button text="Back to main" linkTo="/" />
 			</div>
 		</div>

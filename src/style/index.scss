@@ -6,7 +6,9 @@
 }
 ::root {
 	--index: calc(1vw + 1vh);
+	--transition: 1.25s cubic-bezier(0.2, 0.6, 0, 1);
 }
+
 html::-webkit-scrollbar {
 	display: none;
 }
@@ -16,4 +18,12 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	box-sizing: border-box;
+}
+@media (max-width: 992px) {
+}
+@media (max-width: 768px) {
+}
+@media (max-width: 576px) {
+}
+@media (max-width: 320px) {
 }
