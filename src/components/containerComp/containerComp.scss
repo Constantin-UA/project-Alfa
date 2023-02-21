@@ -1,0 +1,12 @@
+.containerComp {
+	margin: 0 auto;
+	position: relative;
+	max-width: 1316px;
+	min-height: calc(100vh - 48px);
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+	padding: 24px 24px;
+	isolation: isolate;
+}

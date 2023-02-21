@@ -1,0 +1,37 @@
+.contactBox {
+	width: fit-content;
+	height: fit-content;
+	background: rgba(24, 26, 35, 0.6);
+	box-shadow: (-2px -2px 4px #0edecf), (2px 2px 4px #0edecf);
+	border-radius: 25px;
+	padding: 24px;
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		gap: 24px;
+	}
+	&__title {
+		font-weight: 400;
+		font-size: 32px;
+		line-height: 38px;
+		text-align: center;
+		color: #f3c365;
+		text-transform: uppercase;
+	}
+	&__subtitle {
+		font-size: 22px;
+		line-height: 26px;
+		display: flex;
+		align-items: center;
+		text-align: center;
+		color: #f3c365;
+	}
+	@media (max-width: 768px) {
+	}
+	@media (max-width: 576px) {
+	}
+	@media (max-width: 320px) {
+	}
+}

@@ -1,0 +1,32 @@
+.app {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	background: linear-gradient(180deg, #f5ad6f 0%, #e539ab 50%, #7613ee 100%);
+}
+.page {
+	will-change: transition;
+	will-change: transform;
+}
+
+.page-enter {
+	opacity: 0;
+	transform: translateX(-100%);
+}
+.page-exit {
+	opacity: 1;
+	transform: translateX(0%);
+}
+
+.page-enter-active {
+	opacity: 1;
+	transform: translateX(0%);
+}
+.page-exit-active {
+	opacity: 0;
+	transform: translateX(100%);
+}
+.page-enter-active,
+.page-exit-active {
+	transition: all 0.5s;
+}
