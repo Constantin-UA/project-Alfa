@@ -13,18 +13,41 @@
 	@media (min-height: 1440px) {
 		min-height: 100vh;
 	}
-	&-grid {
+	&__wrapper {
 		width: 100%;
 		display: grid;
-		grid-template-columns: 1fr;
-		grid-template-rows: 1fr;
+		grid-template-columns: repeat(2, 1fr);
+		height: 100%;
+	}
+	&__wrapper-a {
+		display: flex;
+		align-items: flex-end;
+		justify-content: center;
+		position: relative;
+	}
+	&__wrapper-b {
+		display: flex;
 		align-items: center;
-		justify-items: center;
+		justify-content: center;
+		position: relative;
 	}
 }
 @media (max-width: 756px) {
 	.homePage {
 		padding: 15px;
 		min-height: 100vh;
+		&__wrapper {
+			width: 100%;
+			display: grid;
+			grid-template-columns: 1fr;
+			grid-template-rows: repeat(2, 1fr);
+			height: 100%;
+		}
+		&__wrapper-a {
+			order: 2;
+		}
+		&__wrapper-b {
+			order: 1;
+		}
 	}
 }

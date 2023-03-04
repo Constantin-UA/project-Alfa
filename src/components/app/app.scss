@@ -9,6 +9,8 @@
 .page {
 	will-change: transition;
 	will-change: transform;
+	will-change: opacity;
+	transition: all 0.3s;
 }
 
 .page-enter {

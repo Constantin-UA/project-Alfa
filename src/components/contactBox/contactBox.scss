@@ -3,7 +3,7 @@
 	height: fit-content;
 	background: rgba(24, 26, 35, 0.6);
 	box-shadow: (-2px -2px 4px #0edecf), (2px 2px 4px #0edecf);
-	border-radius: 8px;
+	border-radius: 2.5rem;
 	padding: 24px;
 	&__wrapper {
 		display: flex;
@@ -31,7 +31,27 @@
 	@media (max-width: 768px) {
 	}
 	@media (max-width: 576px) {
+		padding: 24px;
+		&__wrapper {
+			gap: 24px;
+		}
+		&__title {
+			font-size: 28px;
+			line-height: 30px;
+		}
+		&__subtitle {
+			font-size: 18px;
+			line-height: 22px;
+		}
 	}
-	@media (max-width: 320px) {
+	@media (max-width: 400px) {
+		&__title {
+			font-size: 22px;
+			line-height: 34px;
+		}
+		&__subtitle {
+			font-size: 16px;
+			line-height: 20px;
+		}
 	}
 }

@@ -7,9 +7,15 @@ import './homePage.scss';
 export default function HomePage(props) {
 	return (
 		<div className="homePage">
-			<MainWrapper customStyle={{ backgroundImage: `url(${bgHome})` }}>
-				<TextBox />
-				<Face />
+			<MainWrapper customStyle={{ backgroundImage: `url(${bgHome})`, paddingBottom: '0px' }}>
+				<div className="homePage__wrapper">
+					<div className="homePage__wrapper-a">
+						<Face />
+					</div>
+					<div className="homePage__wrapper-b">
+						<TextBox />
+					</div>
+				</div>
 			</MainWrapper>
 		</div>
 	);

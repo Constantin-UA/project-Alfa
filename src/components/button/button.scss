@@ -6,11 +6,10 @@
 	align-items: center;
 	justify-content: center;
 	padding: 0px;
-	/* 	width: 240px; */
-	height: calc((1vh + 1vw) * 2);
+	width: 200px;
+	height: 40px;
 	background: linear-gradient(180deg, #303c51 0%, #2d2027 26.04%, #2d2027 100%);
-	box-shadow: -2px -2px 4px #0edecf, 2px 2px 2px #0edecf;
-	border-radius: 8px;
+	border-radius: 2.5rem;
 	border: none;
 	cursor: pointer;
 	text-transform: uppercase;
@@ -18,13 +17,19 @@
 	font-weight: 400;
 	font-size: 18px;
 	line-height: 21px;
-
+	box-shadow: 0px 0px 2px #0edecf;
 	text-align: center;
-
+	text-decoration: none;
 	color: #f3c365;
 }
 
 .button:hover {
-	transform: scale(1.05);
-	box-shadow: 0px 0px 2px #0edecf;
+	transform: scale(1.02);
+	box-shadow: -2px -2px 4px #0edecf, 2px 2px 2px #0edecf;
+}
+@media screen and (max-width: 768px) {
+	.button {
+		font-size: 14px;
+		line-height: 21px;
+	}
 }

@@ -1,4 +1,4 @@
-import face from '../../assets/home/face_1.png';
+import face from '../../assets/home/face.png';
 import './face.scss';
 
 export default function Face() {

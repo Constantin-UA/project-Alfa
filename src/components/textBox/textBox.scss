@@ -1,34 +1,24 @@
 .textBox {
-	&__wrapper {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 24px;
-		gap: 24px;
-		z-index: 1;
-		width: fit-content;
-		height: fit-content;
+	/* 	position: absolute;
+	right: 10%;
+	top: 10%; */
 
-		background: rgba(24, 26, 35, 0.6);
-		box-shadow: (-2px -2px 4px #0edecf), (2px 2px 4px #0edecf);
-		border-radius: 8px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 24px;
+	gap: 24px;
+	z-index: 1;
+	width: fit-content;
+	height: fit-content;
 
-		grid-column: 3/4;
-		grid-row: 2/5;
-		@media (max-width: 768px) {
-			grid-column: 2/3;
-			grid-row: 2/5;
-			padding: 16px;
-			gap: 16px;
-		}
-		@media (max-width: 576px) {
-			grid-column: 1/5;
-			grid-row: 1/4;
-		}
-		@media (max-width: 320px) {
-			padding: 12px;
-			gap: 12px;
-		}
-	}
+	background: rgba(24, 26, 35, 0.6);
+	box-shadow: (-2px -2px 4px #0edecf), (2px 2px 4px #0edecf);
+	border-radius: 2.5rem;
+
+	/* 	@media (max-width: 450px) {
+		right: 50%;
+		transform: translate(50%, 0);
+	} */
 }

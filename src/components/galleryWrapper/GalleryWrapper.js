@@ -41,7 +41,9 @@ export default function GalleryWrapper() {
 				{galleryItems.map((i, el) => {
 					return (
 						<SwiperSlide key={el}>
-							<img src={i.img} alt="First slide element" className="gallaryItem__img" />
+							<a href={i.ref} className="gallaryItem__a">
+								<img src={i.img} alt="First slide element" className="gallaryItem__img" />
+							</a>
 						</SwiperSlide>
 					);
 				})}
@@ -49,12 +51,3 @@ export default function GalleryWrapper() {
 		</div>
 	);
 }
-
-/* return <GalleryItem key={idx} item={item} />; */
-/* <div class="swiper slider slider1">
-	<div class="swiper-wrapper slider__wrapper">
-		<div class="swiper-slide slider__item">
-				<div class="slider__img" style="background-image: url(img/1.jpg)"></div>
-		</div>
-	</div>
-</div> */

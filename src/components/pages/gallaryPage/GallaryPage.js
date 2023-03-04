@@ -21,17 +21,3 @@ export default function GallaryPage() {
 		</div>
 	);
 }
-
-/* function GallaryItem({ item }) {
-	return (
-		<div className={`gallaryPage__img-box`}>
-			<a href={item.ref} className="gallaryPage__img ">
-				<img src={item.img} alt="First slide element" />
-			</a>
-		</div>
-	);
-} */
-
-/* imgBG={{ backgroundImage: `url(${bg})` }} */
-
-/*<a href={item.ref} className="gallaryPage__img gallaryPage__${item.name} ">  */
