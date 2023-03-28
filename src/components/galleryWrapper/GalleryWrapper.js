@@ -1,7 +1,8 @@
 /* import GalleryItem from '../galleryItem/GalleryItem'; */
+import { useEffect, useState } from 'react';
 import { Swiper } from 'swiper/react';
 import { SwiperSlide } from 'swiper/react';
-import { Autoplay, FreeMode, Mousewheel, Zoom, Keyboard } from 'swiper';
+import { Autoplay, FreeMode, Mousewheel, Zoom, Keyboard, Pagination } from 'swiper';
 import ai_img from '../../assets/gallary/image 1.png';
 import port_img from '../../assets/gallary/image 3.png';
 import coffe_img from '../../assets/gallary/image 2.png';
@@ -12,8 +13,10 @@ import skgranite from '../../assets/gallary/skgranite.png';
 
 import 'swiper/swiper-bundle.css';
 
+import 'swiper/css';
+import 'swiper/css/grid';
+import 'swiper/css/pagination';
 import './galleryWrapper.scss';
-
 const galleryItems = [
 	{ img: ai_img, ref: 'https://ai.constantine-web.space' },
 	{ img: port_img, ref: 'https://port.constantine-web.space' },
@@ -26,12 +29,27 @@ const galleryItems = [
 // register Swiper custom elements
 
 export default function GalleryWrapper() {
+	const [windowWidth, setWindowWidth] = useState(0);
+	useEffect(() => {
+		setWindowWidth(document.getElementById('body').clientWidth);
+	}, []);
+	const changeSliderSizer = (elem) => {
+		if (elem >= 0 && elem <= 456) {
+			return 3;
+		}
+		if (elem >= 456 && elem <= 1024) {
+			return 2;
+		}
+		if (elem > 1024) {
+			return 1;
+		}
+	};
 	return (
 		<div className="galleryWrapper">
 			<Swiper
-				modules={[Autoplay, FreeMode, Mousewheel, Zoom, Keyboard]}
+				modules={[Autoplay, FreeMode, Mousewheel, Zoom, Keyboard, Pagination]}
 				spaceBetween={8}
-				slidesPerView={2}
+				slidesPerView={changeSliderSizer(windowWidth)}
 				freeMode={true}
 				autoplay={true}
 				speed="1200"
@@ -40,7 +58,10 @@ export default function GalleryWrapper() {
 				zoom={true}
 				keyboard={true}
 				autoHeight={true}
-				direction="vertical"
+				direction={'vertical'}
+				pagination={{
+					clickable: true,
+				}}
 			>
 				{galleryItems.map((i, el) => {
 					return (

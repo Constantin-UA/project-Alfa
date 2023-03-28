@@ -15,11 +15,18 @@ const routes = [
 ];
 function App() {
 	const location = useLocation();
+	const cssRef = createRef();
 	return (
 		<div className="app">
 			<main>
 				<SwitchTransition>
-					<CSSTransition timeout={300} classNames="page" unmountOnExit key={location.pathname}>
+					<CSSTransition
+						nodeRef={cssRef}
+						timeout={300}
+						classNames="page"
+						unmountOnExit
+						key={location.pathname}
+					>
 						{(state) => (
 							<Routes>
 								{routes.map((item) => {
