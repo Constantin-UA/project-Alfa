@@ -1,8 +1,9 @@
-import { HomePage, GallaryPage, ContactsPage } from '../pages';
 import { createRef } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import { CSSTransition, SwitchTransition } from 'react-transition-group';
 import './app.scss';
+import { HomePage, GallaryPage, ContactsPage } from '../pages/';
+
 const routes = [
 	{ path: '/', name: 'Home', element: <HomePage />, nodeRef: createRef() },
 	{ path: '/gallary', name: 'Gallary', element: <GallaryPage />, nodeRef: createRef() },
@@ -22,7 +23,7 @@ function App() {
 				<SwitchTransition>
 					<CSSTransition
 						nodeRef={cssRef}
-						timeout={300}
+						timeout={1000}
 						classNames="page"
 						unmountOnExit
 						key={location.pathname}

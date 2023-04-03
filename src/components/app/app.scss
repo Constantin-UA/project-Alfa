@@ -10,7 +10,7 @@
 	will-change: transition;
 	will-change: transform;
 	will-change: opacity;
-	transition: all 0.3s;
+	transition: all 1s ease;
 }
 
 .page-enter {
@@ -32,5 +32,5 @@
 }
 .page-enter-active,
 .page-exit-active {
-	transition: all 0.5s;
+	transition: all 1s;
 }
